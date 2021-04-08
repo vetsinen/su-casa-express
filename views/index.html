@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>su casa</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <!--    <link rel="stylesheet" href="/main.css"/>-->
+</head>
+<body>
+<style>
+  html {
+    background-color: orange;
+  }
+  .footer {
+    background-color: orange;
+  }
+  .content {
+    margin-left: 10px;
+  }
+</style>
+
+<div class="columns is-mobile">
+  <div class="column is-4">
+    <figure class="image is-64x64 column is-3">
+      <img src="img/dancing-couple.jpg" class="is-rounded" alt="">
+    </figure>
+  </div>
+  <div class="column ">
+    <p class="title is-justify-content-flex-start">
+      mi casa es su casa
+    </p>
+    <p class="subtitle">
+      portal for social dancers
+    </p>
+  </div>
+
+</div>
+
+<!-- Nav -->
+<nav id="nav" class="navbar " role="navigation" style="background-color: orange">
+  <div class="navbar-brand">
+    <a href="#" class="navbar-item">parties</a>
+    <a href="#" class="navbar-item">studios</a>
+    <a href="#" class="navbar-item">adding</a>
+  </div>
+</nav>
+
+<!--{% for party in data %}{% endfor %}-->
+<div class="columns">
+  <div class="column is-3">
+    <figure class="image is-4by3"><img src="https://event-editor-6oghn.ondigitalocean.app{{party.imgPromo.formats.medium.url}}" alt=""></figure>
+  </div>
+  <div class="column content">
+    <h2>{{ party.shortName }} | {{ party.date}}, адрес {{party.address}}</h2>
+    {{party.description}}
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>powered by node.js, strapi, express.js, bulma</strong> <a href="https://jamstack.org/">https://jamstack.org/</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
